@@ -35,10 +35,11 @@ console.log('numberOfFilms: ', numberOfFilms);
         genres: [],
         privat: false
     };
-    console.log('personalMovieDB: ', personalMovieDB);
 
 for (let i = 1; i <= 2; i++) {
-    var a = prompt('Один из последних просмотренных фильмов?'),
-    b = +prompt('На сколько оцените его?');
+    var a = prompt('Один из последних просмотренных фильмов?', ''),
+    b = +prompt('На сколько оцените его?', '');
     personalMovieDB.movies[a] = b;
 }
+
+console.log('personalMovieDB: ', personalMovieDB);
