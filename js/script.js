@@ -1,8 +1,10 @@
 /* Задание на урок:
 
 1) Создать переменную numberOfFilms и в неё поместить ответ от пользователя на вопрос:
-'Сколько фильмов вы уже посмотрели?'
+'Сколько фильмов вы уже посмотрели?'*/
 
+
+/*
 2) Создать объект personalMovieDB и в него поместить такие свойства:
     - count - сюда передается ответ на первый вопрос
     - movies - в это свойство поместить пустой объект
@@ -23,3 +25,20 @@
 
 'use strict';
 
+const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+console.log('numberOfFilms: ', numberOfFilms);
+
+    let personalMovieDB = {
+        count: numberOfFilms,
+        movies: {},
+        actors: {},
+        genres: [],
+        privat: false
+    };
+    console.log('personalMovieDB: ', personalMovieDB);
+
+for (let i = 1; i <= 2; i++) {
+    var a = prompt('Один из последних просмотренных фильмов?'),
+    b = +prompt('На сколько оцените его?');
+    personalMovieDB.movies[a] = b;
+}
